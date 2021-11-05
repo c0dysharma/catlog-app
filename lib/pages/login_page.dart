@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                        labelText: "Passwords",
+                        labelText: "Password",
                         hintText: "Enter Password",
                       ),
                       obscureText: true,
