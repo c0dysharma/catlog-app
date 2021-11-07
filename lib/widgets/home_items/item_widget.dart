@@ -1,4 +1,5 @@
 import 'package:catalog/models/item.dart';
+import 'package:catalog/pages/home_details_page.dart';
 import 'package:flutter/material.dart';
 import 'item_tile_widget.dart';
 
@@ -11,7 +12,14 @@ class ListItems extends StatelessWidget {
       itemCount: ItemList.itemList.length,
       itemBuilder: (context, index) {
         final catalog = ItemList.itemList[index];
-        return ItemWidget(item: catalog);
+        return InkWell(
+          child: ItemWidget(item: catalog),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => HomeDetailsPage(item: catalog)),
+          ),
+        );
       },
     );
   }
@@ -37,4 +45,3 @@ class ItemWidget extends StatelessWidget {
     );
   }
 }
-

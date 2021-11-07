@@ -1,4 +1,4 @@
-import 'package:catalog/widgets/item_image_widget.dart';
+import 'package:catalog/widgets/home_items/item_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:catalog/models/item.dart';
 import 'item_details.dart';
@@ -13,7 +13,10 @@ class ItemTile extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 16, 5, 16),
       child: Row(
         children: [
-          ItemImage(item: item),
+          Hero(
+            tag: item.id.toString(),
+            child: ItemImage(img: item.image),
+          ),
           const SizedBox(width: 16),
           ItemDetail(item: item),
         ],

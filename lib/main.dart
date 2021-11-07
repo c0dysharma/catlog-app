@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:catalog/models/item.dart';
+import 'package:catalog/pages/home_details_page.dart';
 import 'package:catalog/pages/login_page.dart';
 import 'package:catalog/utils/my_routes.dart';
 import 'package:catalog/themes.dart';

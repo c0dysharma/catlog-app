@@ -2,7 +2,7 @@
 
 import 'package:catalog/models/item.dart';
 import 'package:catalog/widgets/header_widget.dart';
-import 'package:catalog/widgets/item_widget.dart';
+import 'package:catalog/widgets/home_items/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
