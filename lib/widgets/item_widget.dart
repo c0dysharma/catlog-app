@@ -1,5 +1,21 @@
 import 'package:catalog/models/item.dart';
 import 'package:flutter/material.dart';
+import 'item_tile_widget.dart';
+
+class ListItems extends StatelessWidget {
+  const ListItems({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: ItemList.itemList.length,
+      itemBuilder: (context, index) {
+        final catalog = ItemList.itemList[index];
+        return ItemWidget(item: catalog);
+      },
+    );
+  }
+}
 
 class ItemWidget extends StatelessWidget {
   final Item item;
@@ -9,23 +25,16 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        leading: Image.network(item.image),
-        title: Text(item.name),
-        subtitle: Text(item.desc),
-        trailing: Text(
-          "\$${item.price}",
-          textScaleFactor: 1.2,
-          style: TextStyle(
-            color: Theme.of(context).primaryColor,
-            fontWeight: FontWeight.bold,
-          ),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 5, 20, 15),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16.0),
+          color: Colors.white,
         ),
-        onTap: () {
-          print("${item.name} pressed");
-        },
+        child: ItemTile(item: item),
       ),
     );
   }
 }
+

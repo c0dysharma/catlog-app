@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:catalog/models/item.dart';
-import 'package:catalog/widgets/drawer.dart';
+import 'package:catalog/widgets/header_widget.dart';
 import 'package:catalog/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,12 +21,11 @@ class _HomePageState extends State<HomePage> {
     loadData();
   }
 
-  List<Item> list = [];
   loadData() async {
     await Future.delayed(Duration(seconds: 3));
     final catlogData = await rootBundle.loadString("assets/files/catlog.json");
     final productsData = jsonDecode(catlogData)["products"];
-    list = List.from(productsData)
+    ItemList.itemList = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
     setState(() {});
@@ -35,21 +34,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Catalog App"),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HeaderWidget(),
+            if (ItemList.itemList.isEmpty)
+              Expanded(child: Center(child: CircularProgressIndicator()))
+            else
+              Expanded(child: ListItems())
+          ],
+        ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: (list.isEmpty)
-            ? Center(child: CircularProgressIndicator())
-            : ListView.builder(
-                itemCount: list.length,
-                itemBuilder: (context, index) => ItemWidget(
-                  item: list[index],
-                ),
-              ),
-      ),
-      drawer: MyDrawer(),
     );
   }
 }
+

@@ -1,3 +1,6 @@
+class ItemList {
+  static List<Item> itemList = [];
+}
 
 class Item {
   final int id;
