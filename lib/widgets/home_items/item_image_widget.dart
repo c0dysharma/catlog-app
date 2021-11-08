@@ -16,6 +16,7 @@ class ItemImage extends StatelessWidget {
       width: 100,
       child: Image.network(
         img,
+        errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
       ),
     );
   }

@@ -14,7 +14,10 @@ class HeaderImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Hero(
       tag: item.id.toString(),
-      child: Image.network(item.image),
+      child: Image.network(
+        item.image,
+        errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
+      ),
     ).h32(context).centered().p16();
   }
 }
