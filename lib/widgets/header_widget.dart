@@ -12,7 +12,7 @@ class HeaderWidget extends StatelessWidget {
         Text(
           "Catalog App",
           style: TextStyle(
-            color: MyThemes.darkBluishColor,
+            color: Theme.of(context).focusColor,
             fontWeight: FontWeight.bold,
             fontSize: 32,
           ),
@@ -20,7 +20,7 @@ class HeaderWidget extends StatelessWidget {
         Text(
           "Trending Products",
           style: TextStyle(
-            color: MyThemes.darkBluishColor,
+            color: Theme.of(context).focusColor,
             fontSize: 18,
           ),
         ),

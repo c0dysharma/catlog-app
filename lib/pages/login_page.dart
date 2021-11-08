@@ -16,22 +16,28 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: Theme.of(context).primaryColor,
       child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset("assets/images/login_image.png", fit: BoxFit.cover),
-            Text(
-              "Welcome $name",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(32, 64, 32, 32),
+          child: Column(
+            children: [
+              Image.asset(
+                "assets/images/lappylogin.png",
+                height: 300,
+                width: 300,
               ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-              child: Form(
+              Text(
+                "Welcome $name",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Form(
                 key: _formkey,
                 child: Column(
                   children: [
@@ -69,25 +75,25 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                if (_formkey.currentState!.validate()) {
-                  Navigator.pushNamed(context, MyRoutes.homeRoute);
-                }
-              },
-              child: Text(
-                "Login",
-                style: TextStyle(fontSize: 18),
+              SizedBox(
+                height: 20,
               ),
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(120, 40),
-              ),
-            )
-          ],
+              ElevatedButton(
+                onPressed: () {
+                  if (_formkey.currentState!.validate()) {
+                    Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  }
+                },
+                child: Text(
+                  "Login",
+                  style: TextStyle(fontSize: 18),
+                ),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(120, 40),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -18,6 +18,10 @@ class HeaderImage extends StatelessWidget {
         item.image,
         errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
       ),
-    ).h32(context).centered().p16();
+    )
+        .h32(context)
+        .centered()
+        .p16()
+        .backgroundColor(Theme.of(context).canvasColor);
   }
 }

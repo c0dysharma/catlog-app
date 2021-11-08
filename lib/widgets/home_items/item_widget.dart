@@ -38,7 +38,7 @@ class ItemWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.0),
-          color: Colors.white,
+          color: Theme.of(context).primaryColor,
         ),
         child: ItemTile(item: item),
       ),

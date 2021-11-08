@@ -10,7 +10,7 @@ class ItemImage extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: MyThemes.creamColor,
+        color: Theme.of(context).canvasColor,
       ),
       height: 100,
       width: 100,

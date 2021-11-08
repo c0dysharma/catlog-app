@@ -15,14 +15,14 @@ class DetailArc extends StatelessWidget {
         arcType: VxArcType.CONVEY,
         edge: VxEdge.TOP,
         child: Container(
-          color: Colors.white,
+          color: Theme.of(context).primaryColor,
           width: context.screenWidth,
           child: Column(
             children: [
               Text(
                 item.name,
                 style: TextStyle(
-                  color: MyThemes.darkBluishColor,
+                  color: Theme.of(context).focusColor,
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),

@@ -12,19 +12,17 @@ class HomeDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyThemes.creamColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
+      // backgroundColor: Theme.of(context).primaryColor,
+      appBar: AppBar(),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: Theme.of(context).primaryColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               "\$${item.price.toString()}",
               style: TextStyle(
-                color: Colors.red[900],
+                color: Theme.of(context).highlightColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
               ),
@@ -36,7 +34,7 @@ class HomeDetailsPage extends StatelessWidget {
               child: const Text("Buy"),
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(MyThemes.darkBluishColor),
+                    MaterialStateProperty.all(Theme.of(context).focusColor),
                 shape: MaterialStateProperty.all(const StadiumBorder()),
               ),
             ).wh(100, 50),
@@ -57,7 +55,3 @@ class HomeDetailsPage extends StatelessWidget {
     );
   }
 }
-
-
-
-

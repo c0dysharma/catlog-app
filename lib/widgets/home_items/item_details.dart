@@ -16,7 +16,7 @@ class ItemDetail extends StatelessWidget {
           Text(
             item.name,
             style: TextStyle(
-              color: MyThemes.darkBluishColor,
+              color: Theme.of(context).focusColor,
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),
@@ -31,7 +31,7 @@ class ItemDetail extends StatelessWidget {
               Text(
                 "\$${item.price.toString()}",
                 style: TextStyle(
-                  color: MyThemes.darkBluishColor,
+                  color: Theme.of(context).focusColor,
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
@@ -43,7 +43,7 @@ class ItemDetail extends StatelessWidget {
                 child: const Text("Buy"),
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyThemes.darkBluishColor),
+                      MaterialStateProperty.all(Theme.of(context).focusColor),
                   shape: MaterialStateProperty.all(const StadiumBorder()),
                 ),
               ),
