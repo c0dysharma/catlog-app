@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:catalog/models/item.dart';
 import 'package:catalog/widgets/header_widget.dart';
 import 'package:catalog/widgets/home_items/item_widget.dart';
@@ -22,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     final catlogData = await rootBundle.loadString("assets/files/catlog.json");
     final productsData = jsonDecode(catlogData)["products"];
     ItemList.itemList = List.from(productsData)
@@ -38,11 +36,11 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HeaderWidget(),
+            const HeaderWidget(),
             if (ItemList.itemList.isEmpty)
-              Expanded(child: Center(child: CircularProgressIndicator()))
+              const Expanded(child: Center(child: CircularProgressIndicator()))
             else
-              Expanded(child: ListItems())
+              const Expanded(child: ListItems())
           ],
         ),
       ),

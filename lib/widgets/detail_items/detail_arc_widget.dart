@@ -1,5 +1,4 @@
 import 'package:catalog/models/item.dart';
-import 'package:catalog/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -27,7 +26,7 @@ class DetailArc extends StatelessWidget {
                   fontSize: 30,
                 ),
               ).pLTRB(16, 32, 16, 0),
-              "${item.desc}".text.caption(context).lg.make(),
+              item.desc.text.caption(context).lg.make(),
               'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis'
                   .text
                   .caption(context)

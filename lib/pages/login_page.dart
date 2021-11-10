@@ -1,6 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:catalog/utils/my_routes.dart';
+import 'package:catalog/widgets/login_items/login_button_widget.dart';
+import 'package:catalog/widgets/login_items/login_image_widget.dart';
+import 'package:catalog/widgets/login_items/login_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -15,26 +15,16 @@ class _LoginPageState extends State<LoginPage> {
   final _formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Theme.of(context).primaryColor,
-      child: SingleChildScrollView(
+    return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(32, 64, 32, 32),
           child: Column(
             children: [
-              Image.asset(
-                "assets/images/lappylogin.png",
-                height: 300,
-                width: 300,
-              ),
-              Text(
-                "Welcome $name",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
+              const LoginImage(),
+              LoginText(name: name),
+              const SizedBox(
                 height: 20,
               ),
               Form(
@@ -42,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Username",
                         hintText: "Enter Username",
                       ),
@@ -57,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Password",
                         hintText: "Enter Password",
                       ),
@@ -75,23 +65,10 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formkey.currentState!.validate()) {
-                    Navigator.pushNamed(context, MyRoutes.homeRoute);
-                  }
-                },
-                child: Text(
-                  "Login",
-                  style: TextStyle(fontSize: 18),
-                ),
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(120, 40),
-                ),
-              )
+              LoginButton(formkey: _formkey)
             ],
           ),
         ),
@@ -99,3 +76,9 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+
+
+
+
+

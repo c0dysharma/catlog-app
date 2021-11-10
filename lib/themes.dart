@@ -29,7 +29,7 @@ class MyThemes {
         canvasColor: MyThemes.darkBluishColor,
         primaryColor: MyThemes.darkPrimary,
         focusColor: MyThemes.creamColor,
-        highlightColor: Colors.amber,
+        highlightColor: Colors.green[300],
         errorColor: Colors.amber[300],
         fontFamily: GoogleFonts.poppins().fontFamily,
         appBarTheme: const AppBarTheme(
@@ -40,8 +40,8 @@ class MyThemes {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            onPrimary: MyThemes.darkPrimary,
-          ),
+              // onPrimary: MyThemes.darkPrimary,
+              ),
         ),
       );
 
@@ -50,5 +50,4 @@ class MyThemes {
   static Color lightPrimary = const Color(0xffffffff);
   static Color darkBluishColor = const Color(0xff403b58);
   static Color darkPrimary = const Color(0xff39354f);
-
 }

@@ -27,9 +27,7 @@ class ListItems extends StatelessWidget {
 
 class ItemWidget extends StatelessWidget {
   final Item item;
-  const ItemWidget({Key? key, required this.item})
-      : assert(item != Null),
-        super(key: key);
+  const ItemWidget({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

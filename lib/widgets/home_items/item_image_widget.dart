@@ -1,4 +1,3 @@
-import 'package:catalog/themes.dart';
 import 'package:flutter/material.dart';
 
 class ItemImage extends StatelessWidget {

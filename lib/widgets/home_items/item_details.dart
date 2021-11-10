@@ -1,5 +1,5 @@
 import 'package:catalog/models/item.dart';
-import 'package:catalog/themes.dart';
+import 'package:catalog/widgets/add_to_cart_button.dart';
 import 'package:flutter/material.dart';
 
 class ItemDetail extends StatelessWidget {
@@ -36,17 +36,7 @@ class ItemDetail extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  print("Sell your kideny!");
-                },
-                child: const Text("Buy"),
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(Theme.of(context).focusColor),
-                  shape: MaterialStateProperty.all(const StadiumBorder()),
-                ),
-              ),
+              const AddToCartButton(),
             ],
           )
         ],
@@ -54,3 +44,4 @@ class ItemDetail extends StatelessWidget {
     );
   }
 }
+
