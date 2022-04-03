@@ -1,4 +1,4 @@
-package com.example.catalog
+package com.example.cat
 
 import io.flutter.embedding.android.FlutterActivity
 

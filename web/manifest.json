@@ -1,6 +1,6 @@
 {
-    "name": "catalog",
-    "short_name": "catalog",
+    "name": "cat",
+    "short_name": "cat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

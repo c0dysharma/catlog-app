@@ -1,4 +1,4 @@
-# catalog
+# cat
 
 A new Flutter project.
 
