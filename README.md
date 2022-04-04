@@ -26,4 +26,4 @@ Some of screenshots showing the UI built using flutter
 ## **Wanna Try?**
 
 Head on to [Releases Page.](https://github.com/c0dysharma/catlog-app/releases)
-Choose based on your device ABI or get AIO file. ☮
+Choose based on your device [ABI](https://github.com/c0dysharma/catlog-app/releases/tag/v1.0.0-abi) or get [AIO file.](https://github.com/c0dysharma/catlog-app/releases/download/v1.0.0/app-release.apk) ☮
