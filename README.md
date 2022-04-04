@@ -1,16 +1,29 @@
-# cat
+# **Catlog App**
 
-A new Flutter project.
+UI concept for a e-shop with light and dark theme support changes with system theme
+<hr></hr>
 
-## Getting Started
+## **Screnshots**
 
-This project is a starting point for a Flutter application.
+Some of screenshots showing the UI built using flutter
 
-A few resources to get you started if this is your first Flutter project:
+### **Dark Theme** 🖤
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img src="./assets/screenshots/loginDark.PNG" title="Login Page" width="50%" height="50%">
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="./assets/screenshots/homeDark.PNG" title="Home Page" width="50%" height="50%">
+
+<img src="./assets/screenshots/productDark.PNG" title="Product Page" width="50%" height="50%">
+
+### **Light Theme** 💡
+
+<img src="./assets/screenshots/loginLight.PNG" title="Login Page" width="50%" height="50%">
+
+<img src="./assets/screenshots/homeLight.PNG" title="Home Page" width="50%" height="50%">
+
+<img src="./assets/screenshots/productLight.PNG" title="Product Page" width="50%" height="50%">
+
+## **Wanna Try?**
+
+Head on to [Releases Page.](https://github.com/c0dysharma/catlog-app/releases)
+Choose based on your device ABI or get AIO file. ☮
